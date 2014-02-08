@@ -1,10 +1,10 @@
 	.version 1.4
 	.target sm_10, map_f64_to_f32
-	// compiled with /usr/local/cuda/bin/../open64/lib//be
-	// nvopencc 4.1 built on 2013-07-10
+	// compiled with /Developer/NVIDIA/CUDA-5.5/bin/../open64/lib//be
+	// nvopencc 4.1 built on 2013-09-05
 
 	//-----------------------------------------------------------
-	// Compiling /tmp/tmpxft_0001114c_00000000-9_vadd.cpp3.i (/var/folders/5m/t0vg68b549g33035gr3sl6qc0000gn/T/ccBI#.OgFBGk)
+	// Compiling /tmp/tmpxft_00000444_00000000-9_vadd.cpp3.i (/var/folders/wt/3hb5_jf16h14f8s94vtf9hkw0000gn/T/ccBI#.fZMhkj)
 	//-----------------------------------------------------------
 
 	//-----------------------------------------------------------
@@ -16,39 +16,38 @@
 	//  -m2	(Report advisories)
 	//-----------------------------------------------------------
 
-	.file	1	"<command-line>"
-	.file	2	"/tmp/tmpxft_0001114c_00000000-8_vadd.cudafe2.gpu"
-	.file	3	"/usr/llvm-gcc-4.2/bin/../lib/gcc/i686-apple-darwin11/4.2.1/include/stddef.h"
-	.file	4	"/usr/local/cuda/bin/../include/crt/device_runtime.h"
-	.file	5	"/usr/local/cuda/bin/../include/host_defines.h"
-	.file	6	"/usr/local/cuda/bin/../include/builtin_types.h"
-	.file	7	"/usr/local/cuda/bin/../include/device_types.h"
-	.file	8	"/usr/local/cuda/bin/../include/driver_types.h"
-	.file	9	"/usr/local/cuda/bin/../include/surface_types.h"
-	.file	10	"/usr/local/cuda/bin/../include/texture_types.h"
-	.file	11	"/usr/local/cuda/bin/../include/vector_types.h"
-	.file	12	"/usr/local/cuda/bin/../include/device_launch_parameters.h"
-	.file	13	"/usr/local/cuda/bin/../include/crt/storage_class.h"
-	.file	14	"vadd.cu"
-	.file	15	"/usr/local/cuda/bin/../include/common_functions.h"
-	.file	16	"/usr/local/cuda/bin/../include/math_functions.h"
-	.file	17	"/usr/local/cuda/bin/../include/math_constants.h"
-	.file	18	"/usr/local/cuda/bin/../include/device_functions.h"
-	.file	19	"/usr/local/cuda/bin/../include/sm_11_atomic_functions.h"
-	.file	20	"/usr/local/cuda/bin/../include/sm_12_atomic_functions.h"
-	.file	21	"/usr/local/cuda/bin/../include/sm_13_double_functions.h"
-	.file	22	"/usr/local/cuda/bin/../include/sm_20_atomic_functions.h"
-	.file	23	"/usr/local/cuda/bin/../include/sm_32_atomic_functions.h"
-	.file	24	"/usr/local/cuda/bin/../include/sm_35_atomic_functions.h"
-	.file	25	"/usr/local/cuda/bin/../include/sm_20_intrinsics.h"
-	.file	26	"/usr/local/cuda/bin/../include/sm_30_intrinsics.h"
-	.file	27	"/usr/local/cuda/bin/../include/sm_32_intrinsics.h"
-	.file	28	"/usr/local/cuda/bin/../include/sm_35_intrinsics.h"
-	.file	29	"/usr/local/cuda/bin/../include/surface_functions.h"
-	.file	30	"/usr/local/cuda/bin/../include/texture_fetch_functions.h"
-	.file	31	"/usr/local/cuda/bin/../include/texture_indirect_functions.h"
-	.file	32	"/usr/local/cuda/bin/../include/surface_indirect_functions.h"
-	.file	33	"/usr/local/cuda/bin/../include/math_functions_dbl_ptx1.h"
+	.file	1	"/tmp/tmpxft_00000444_00000000-8_vadd.cudafe2.gpu"
+	.file	2	"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/5.0/include/stddef.h"
+	.file	3	"/Developer/NVIDIA/CUDA-5.5/bin/../include/crt/device_runtime.h"
+	.file	4	"/Developer/NVIDIA/CUDA-5.5/bin/../include/host_defines.h"
+	.file	5	"/Developer/NVIDIA/CUDA-5.5/bin/../include/builtin_types.h"
+	.file	6	"/Developer/NVIDIA/CUDA-5.5/bin/../include/device_types.h"
+	.file	7	"/Developer/NVIDIA/CUDA-5.5/bin/../include/driver_types.h"
+	.file	8	"/Developer/NVIDIA/CUDA-5.5/bin/../include/surface_types.h"
+	.file	9	"/Developer/NVIDIA/CUDA-5.5/bin/../include/texture_types.h"
+	.file	10	"/Developer/NVIDIA/CUDA-5.5/bin/../include/vector_types.h"
+	.file	11	"/Developer/NVIDIA/CUDA-5.5/bin/../include/device_launch_parameters.h"
+	.file	12	"/Developer/NVIDIA/CUDA-5.5/bin/../include/crt/storage_class.h"
+	.file	13	"vadd.cu"
+	.file	14	"/Developer/NVIDIA/CUDA-5.5/bin/../include/common_functions.h"
+	.file	15	"/Developer/NVIDIA/CUDA-5.5/bin/../include/math_functions.h"
+	.file	16	"/Developer/NVIDIA/CUDA-5.5/bin/../include/math_constants.h"
+	.file	17	"/Developer/NVIDIA/CUDA-5.5/bin/../include/device_functions.h"
+	.file	18	"/Developer/NVIDIA/CUDA-5.5/bin/../include/sm_11_atomic_functions.h"
+	.file	19	"/Developer/NVIDIA/CUDA-5.5/bin/../include/sm_12_atomic_functions.h"
+	.file	20	"/Developer/NVIDIA/CUDA-5.5/bin/../include/sm_13_double_functions.h"
+	.file	21	"/Developer/NVIDIA/CUDA-5.5/bin/../include/sm_20_atomic_functions.h"
+	.file	22	"/Developer/NVIDIA/CUDA-5.5/bin/../include/sm_32_atomic_functions.h"
+	.file	23	"/Developer/NVIDIA/CUDA-5.5/bin/../include/sm_35_atomic_functions.h"
+	.file	24	"/Developer/NVIDIA/CUDA-5.5/bin/../include/sm_20_intrinsics.h"
+	.file	25	"/Developer/NVIDIA/CUDA-5.5/bin/../include/sm_30_intrinsics.h"
+	.file	26	"/Developer/NVIDIA/CUDA-5.5/bin/../include/sm_32_intrinsics.h"
+	.file	27	"/Developer/NVIDIA/CUDA-5.5/bin/../include/sm_35_intrinsics.h"
+	.file	28	"/Developer/NVIDIA/CUDA-5.5/bin/../include/surface_functions.h"
+	.file	29	"/Developer/NVIDIA/CUDA-5.5/bin/../include/texture_fetch_functions.h"
+	.file	30	"/Developer/NVIDIA/CUDA-5.5/bin/../include/texture_indirect_functions.h"
+	.file	31	"/Developer/NVIDIA/CUDA-5.5/bin/../include/surface_indirect_functions.h"
+	.file	32	"/Developer/NVIDIA/CUDA-5.5/bin/../include/math_functions_dbl_ptx1.h"
 
 
 	.entry vadd (
@@ -60,9 +59,9 @@
 	.reg .u32 %r<5>;
 	.reg .u64 %rd<10>;
 	.reg .f32 %f<5>;
-	.loc	14	6	0
+	.loc	13	6	0
 $LDWbegin_vadd:
-	.loc	14	9	0
+	.loc	13	9	0
 	cvt.u32.u16 	%r1, %tid.x;
 	mov.u16 	%rh1, %ctaid.x;
 	mov.u16 	%rh2, %ntid.x;
@@ -80,7 +79,7 @@ $LDWbegin_vadd:
 	ld.param.u64 	%rd7, [__cudaparm_vadd_c];
 	add.u64 	%rd8, %rd7, %rd2;
 	st.global.f32 	[%rd8+0], %f3;
-	.loc	14	10	0
+	.loc	13	10	0
 	exit;
 $LDWend_vadd:
 	} // vadd
