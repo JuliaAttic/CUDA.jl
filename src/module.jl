@@ -20,7 +20,7 @@ immutable CuFunction
 
 	function CuFunction(md::CuModule, name::ASCIIString)
 		a = Array(Ptr{Void}, 1)
-		@cucall(:cuModuleGetFunction, (Ptr{Ptr{Void}}, Ptr{Void}, Ptr{Cchar}), 
+		@cucall(:cuModuleGetFunction, (Ptr{Ptr{Void}}, Ptr{Void}, Ptr{Cchar}),
 			a, md.handle, name)
 		new(a[1])
 	end

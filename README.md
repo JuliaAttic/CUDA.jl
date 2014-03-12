@@ -1,6 +1,6 @@
 ## CUDA.jl
 
-Julia Programming interface for CUDA. 
+Julia Programming interface for CUDA.
 
 This package wraps key functions in CUDA Driver API for Julia. While this remains work in progress, simple use is ready.
 
@@ -38,7 +38,7 @@ extern "C"   // ensure function name to be exactly "vadd"
 		int i = threadIdx.x + blockIdx.x * blockDim.x;
 		c[i] = a[i] + b[i];
 	}
-} 
+}
 
 ```
 
@@ -102,5 +102,5 @@ unload(md)
 destroy(ctx)
 ```
 
-This is a relatively low-level API and is designed for people who have some understanding of CUDA programming to write/migrate CUDA codes in Julia. Compared to CUDA C, the interface has been greatly simplified. 
+This is a relatively low-level API and is designed for people who have some understanding of CUDA programming to write/migrate CUDA codes in Julia. Compared to CUDA C, the interface has been greatly simplified.
 
