@@ -17,7 +17,7 @@ immutable CuDevice
 		a = Cint[0]
 		@cucall(:cuDeviceGet, (Ptr{Cint}, Cint), a, ordinal)
 		handle = a[1]
-		new(ordinal, handle)		
+		new(ordinal, handle)
 	end
 end
 
