@@ -1,4 +1,0 @@
-# CUDA related types
-
-
-

@@ -1,44 +1,45 @@
 module CUDA
 
-	import Base.length, Base.size
-	import Base.copy!
+    import Base.length, Base.size
+    import Base.copy!
 
-	export
+    export
 
-	# errors
-	CuDriverError, description,
+    # errors
+    CuDriverError, description,
 
-	# base
-	@cucall, 
+    # base
+    @cucall, 
 
-	# devices
-	CuDevice, CuCapability, dev_count, name, totalmem, attribute, capability,
-	list_devices,
+    # devices
+    CuDevice, CuCapability, dev_count, name, totalmem, attribute, capability,
+    list_devices,
 
-	# context
-	CuContext, create_context, destroy, push, pop,
+    # context
+    CuContext, create_context, destroy, push, pop,
 
-	# module
-	CuModule, CuFunction, unload,
+    # module
+    CuModule, CuFunction, unload,
 
-	# stream
-	CuStream, synchronize,
+    # stream
+    CuStream, synchronize,
 
-	# execution
-	launch,
+    # execution
+    launch,
 
-	# arrays
-	CuPtr, CuArray, free, to_host
+    # arrays
+    CuPtr, CuArray, free, to_host
 
 
-	include("errors.jl")
+    include("errors.jl")
+    include("funmap.jl")
 
-	include("base.jl")
-	include("devices.jl")
-	include("context.jl")
-	include("module.jl")
-	include("stream.jl")
-	include("execution.jl")
+    include("base.jl")
+    include("devices.jl")
+    include("context.jl")
+    include("module.jl")
+    include("stream.jl")
+    include("execution.jl")
 
-	include("arrays.jl")
+    include("arrays.jl")
 end
