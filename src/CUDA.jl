@@ -9,7 +9,7 @@ module CUDA
 	CuDriverError, description,
 
 	# base
-	@cucall, driver_version,
+	@cucall, 
 
 	# devices
 	CuDevice, CuCapability, dev_count, name, totalmem, attribute, capability,

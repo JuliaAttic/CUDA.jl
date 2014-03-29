@@ -29,6 +29,12 @@ function driver_version()
 	return int(a[1])
 end
 
+const DriverVersion = driver_version()
+
+if DriverVersion < 4000
+	error("CUDA of version 4.0 or above is required.")
+end
+
 
 # box a variable into array
 
