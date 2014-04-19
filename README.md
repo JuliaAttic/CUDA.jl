@@ -4,9 +4,13 @@ Julia Programming interface for CUDA.
 
 This package wraps key functions in CUDA Driver API for Julia. While this remains work in progress, simple use is ready.
 
+**Note:** This package was tested on Ubuntu (13.04 or above) and Mac OS X (10.8+). It has not been tested on Windows.
+
 ### Setup
 
-1. Install CUDA driver, and make sure ``libcuda`` is in your library loading path.
+1. Install CUDA driver, and make sure ``libcuda`` is in your library loading path. 
+
+   **Note:** ``libcuda`` is a shared library for the CUDA driver. 
 
 2. Checkout this package in Julia:
 
