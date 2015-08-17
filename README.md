@@ -4,7 +4,7 @@ Julia Programming interface for CUDA.
 
 This package wraps key functions in CUDA Driver API for Julia. While this remains work in progress, simple use is ready. See also the [CUDArt package](https://github.com/JuliaGPU/CUDArt.jl).
 
-**Note:** This package was tested on Ubuntu (13.04 or above) and Mac OS X (10.8+). It has not been tested on Windows.
+**Note:** This package was tested on Ubuntu (13.04 or above) and Mac OS X (10.8+). It has not been tested thoroughly on Windows.
 
 ### Setup
 

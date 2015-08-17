@@ -30,6 +30,8 @@ module CUDA
     # arrays
     CuPtr, CuArray, free, to_host
 
+    const CUDA_LIB = @windows? "nvcuda.dll" : "libcuda"
+    dlopen(CUDA_LIB)    # loads library, throws an error if not found
 
     include("errors.jl")
     include("funmap.jl")
