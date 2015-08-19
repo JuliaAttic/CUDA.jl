@@ -6,7 +6,7 @@
 macro cucall(fv, argtypes, args...)
     f = eval(fv)
     quote
-        _curet = ccall( ($(Meta.quot(f)), "libcuda"), Cint, $argtypes, $(args...) )
+        _curet = ccall( ($(Meta.quot(f)), CUDA_LIB), Cint, $argtypes, $(args...) )
         if _curet != 0
             throw(CuDriverError(int(_curet)))
         end
