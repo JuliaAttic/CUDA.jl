@@ -1,4 +1,6 @@
 ## CUDA.jl
+<!-- Link from version translated into Portuguese the README -->
+[Veja a versão em português-br](https://github.com/jfilhoGN/CUDA.jl/blob/master/README_PT.md)
 
 Julia Programming interface for CUDA.
 
