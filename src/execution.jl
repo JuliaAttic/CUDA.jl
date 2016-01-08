@@ -12,7 +12,7 @@ get_dim_z(g::Int) = 1
 get_dim_z(g::Tuple{Int, Int}) = 1
 get_dim_z(g::Tuple{Int, Int, Int}) = g[3]
 
-typealias CuDim Union(Int, Tuple{Int, Int}, Tuple{Int, Int, Int})
+typealias CuDim Union{Int, Tuple{Int, Int}, Tuple{Int, Int, Int}}
 
 # Stream management
 

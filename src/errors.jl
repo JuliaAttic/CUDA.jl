@@ -1,7 +1,7 @@
 # CUDA errors
 
 
-const driver_error_descriptions = (Int=>ASCIIString)[
+const driver_error_descriptions = Dict{Int,ASCIIString}(
     0 => "Success",
     1 => "Invalid value",
     2 => "Out of memory",
@@ -59,7 +59,7 @@ const driver_error_descriptions = (Int=>ASCIIString)[
     800 => "Operation not permitted",
     801 => "Operation not supported",
     999 => "Unknown error"
-]
+)
 
 
 immutable CuDriverError
