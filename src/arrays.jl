@@ -1,6 +1,6 @@
 # Arrays on GPU
 
-typealias CUdeviceptr Uint64
+typealias CUdeviceptr UInt64
 
 immutable CuPtr
     p::CUdeviceptr

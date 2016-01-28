@@ -8,7 +8,7 @@ macro cucall(fv, argtypes, args...)
     quote
         _curet = ccall( ($(Meta.quot(f)), CUDA_LIB), Cint, $argtypes, $(args...) )
         if _curet != 0
-            throw(CuDriverError(int(_curet)))
+            throw(CuDriverError(Int(_curet)))
         end
     end
 end
@@ -26,7 +26,7 @@ initialize()
 function driver_version()
     a = Cint[0]
     @cucall(cuDriverGetVersion, (Ptr{Cint},), a)
-    return int(a[1])
+    return Int(a[1])
 end
 
 const DriverVersion = driver_version()
