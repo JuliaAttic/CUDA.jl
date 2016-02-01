@@ -52,16 +52,8 @@ c = to_host(cd)
 #Negative test cases
 a = rand(Float32, 10)
 ad = CuArray(Float32, 5)
-try 
-	copy!(ad, a)
-catch e
-	@test typeof(e) == ArgumentError
-end
-try 
-	copy!(a, ad)
-catch e
-	@test typeof(e) == ArgumentError
-end
+@test_throws ArgumentError copy!(ad, a)
+@test_throws ArgumentError copy!(a, ad)
 
 #Utility
 @test CUDA.ndims(ad) == 1
