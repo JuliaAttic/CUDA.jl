@@ -25,7 +25,7 @@ module CUDA
     CuStream, synchronize,
 
     # execution
-    culaunch,
+    launch,
 
     # arrays
     CuPtr, CuArray, free, to_host

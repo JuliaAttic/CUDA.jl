@@ -16,7 +16,7 @@ typealias CuDim Union{Int, Tuple{Int, Int}, Tuple{Int, Int, Int}}
 
 # Stream management
 
-function culaunch(f::CuFunction, grid::CuDim, block::CuDim, args::Tuple; shmem_bytes::Int=4, stream::CuStream=null_stream())
+function launch(f::CuFunction, grid::CuDim, block::CuDim, args::Tuple; shmem_bytes::Int=4, stream::CuStream=null_stream())
     gx = get_dim_x(grid)
     gy = get_dim_y(grid)
     gz = get_dim_z(grid)
