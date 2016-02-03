@@ -2,9 +2,9 @@
 
 function devcount()
     # Get the number of CUDA-capable CuDevices
-    a = Cint[0]
+    a = Ref{Cint}()
     @cucall(cuDeviceGetCount, (Ptr{Cint},), a)
-    return int(a[1])
+    return Int(a[])
 end
 
 
@@ -14,9 +14,9 @@ immutable CuDevice
 
     function CuDevice(i::Int)
         ordinal = convert(Cint, i)
-        a = Cint[0]
+        a = Ref{Cint}()
         @cucall(cuDeviceGet, (Ptr{Cint}, Cint), a, ordinal)
-        handle = a[1]
+        handle = a[]
         new(ordinal, handle)
     end
 end
@@ -34,15 +34,15 @@ function name(dev::CuDevice)
 end
 
 function totalmem(dev::CuDevice)
-    a = Csize_t[0]
+    a = Ref{Csize_t}()
     @cucall(cuDeviceTotalMem, (Ptr{Csize_t}, Cint), a, dev.handle)
-    return int(a[1])
+    return Int(a[])
 end
 
 function attribute(dev::CuDevice, attrcode::Integer)
-    a = Cint[0]
+    a = Ref{Cint}()
     @cucall(cuDeviceGetAttribute, (Ptr{Cint}, Cint, Cint), a, attrcode, dev.handle)
-    return int(a[1])
+    return Int(a[])
 end
 
 capability(dev::CuDevice) = CuCapability(attribute(dev, 75), attribute(dev, 76))
