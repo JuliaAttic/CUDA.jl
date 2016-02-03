@@ -83,9 +83,9 @@ gb = CuArray(b)
 gc = CuArray(Float32, (3, 4))
 
 # run the kernel vadd
-# syntax: launch(kernel, grid_size, block_size, arguments)
+# syntax: CUDA.launch(kernel, grid_size, block_size, arguments)
 # here, grid_size and block_size can be an integer or a tuple of integers
-launch(vadd, 12, 1, (ga, gb, gc))
+CUDA.launch(vadd, 12, 1, (ga, gb, gc))
 
 # download the results from GPU
 c = to_host(gc)   # c is a Julia array on CPU (host)
