@@ -13,7 +13,7 @@ cubox(p::CuPtr) = cubox(p.p)
 
 function cualloc(T::Type, len::Integer)
     a = CUdeviceptr[0]
-    nbytes = int(len) * sizeof(T)
+    nbytes = Int(len) * sizeof(T)
     @cucall(cuMemAlloc, (Ptr{CUdeviceptr}, Csize_t), a, nbytes)
     return CuPtr(a[1])
 end
@@ -39,7 +39,7 @@ type CuArray{T,N}
 end
 
 function CuArray(T::Type, len::Integer)
-    n = int(len)
+    n = Int(len)
     p = cualloc(T, n)
     CuArray{T,1}(p, (n,), n)
 end

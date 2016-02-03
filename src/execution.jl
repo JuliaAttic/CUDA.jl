@@ -39,6 +39,6 @@ function launch(f::CuFunction, grid::CuDim, block::CuDim, args::Tuple; shmem_byt
         Ptr{Void}, # stream
         Ptr{Ptr{Void}}, # kernel parameters,
         Ptr{Ptr{Void}}), # extra parameters
-        f.handle, gx, gy, gz, tx, ty, tz, shmem_bytes, stream.handle, kernel_args, 0)
+        f.handle, gx, gy, gz, tx, ty, tz, shmem_bytes, stream.handle, kernel_args, C_NULL)
 end
 
