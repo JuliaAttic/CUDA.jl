@@ -18,6 +18,7 @@ function cualloc(T::Type, len::Integer)
     return CuPtr(a[1])
 end
 
+"Free GPU memory allocated to the pointer"
 function free(p::CuPtr)
     @cucall(cuMemFree, (CUdeviceptr,), p.p)
 end
@@ -68,6 +69,7 @@ function free(g::CuArray)
     end
 end
 
+"Copy an array from device to host in place"
 function copy!{T}(dst::Array{T}, src::CuArray{T})
     if length(dst) != length(src)
         throw(ArgumentError("Inconsistent array length."))
@@ -77,6 +79,7 @@ function copy!{T}(dst::Array{T}, src::CuArray{T})
     return dst
 end
 
+"Copy an array from host to device in place"
 function copy!{T}(dst::CuArray{T}, src::Array{T})
     if length(dst) != length(src)
         throw(ArgumentError("Inconsistent array length."))
@@ -86,7 +89,10 @@ function copy!{T}(dst::CuArray{T}, src::Array{T})
     return dst
 end
 
+"Transfer an array from host to device, returning a pointer on the device"
 CuArray{T,N}(a::Array{T,N}) = copy!(CuArray(T, size(a)), a)
+
+"Transfer an array on the device to host"
 to_host{T}(g::CuArray{T}) = copy!(Array(T, size(g)), g)
 
 

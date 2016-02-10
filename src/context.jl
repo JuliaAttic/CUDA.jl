@@ -17,8 +17,10 @@ function create_context(dev::CuDevice, flags::Integer)
     return CuContext(a[1])
 end
 
+"Create a context (like process on CPU) for device"
 create_context(dev::CuDevice) = create_context(dev, 0)
 
+"Destroy context once execution is complete"
 function destroy(ctx::CuContext)
     @cucall(cuCtxDestroy, (Ptr{Void},), ctx.handle)
 end
