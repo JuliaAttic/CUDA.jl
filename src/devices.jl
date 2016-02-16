@@ -35,7 +35,7 @@ function name(dev::CuDevice)
     bytestring(pointer(buf))
 end
 
-"Get total GPU memory of a device"
+"Get total GPU memory of a device in bytes"
 function totalmem(dev::CuDevice)
     a = Ref{Csize_t}()
     @cucall(cuDeviceTotalMem, (Ptr{Csize_t}, Cint), a, dev.handle)
@@ -48,7 +48,7 @@ function attribute(dev::CuDevice, attrcode::Integer)
     return Int(a[])
 end
 
-"Return the CUDA capability of device"
+"Return the CUDA capability of device as a CuCapability object in the format (majorversion, minorversion)"
 capability(dev::CuDevice) = CuCapability(attribute(dev, 75), attribute(dev, 76))
 
 "List all devices with their capabilities and attributes"
