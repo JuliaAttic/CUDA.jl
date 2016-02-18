@@ -12,7 +12,7 @@ module CUDA
     @cucall, 
 
     # devices
-    CuDevice, CuCapability, dev_count, name, totalmem, attribute, capability,
+    CuDevice, CuCapability, devcount, name, totalmem, attribute, capability,
     list_devices,
 
     # context

@@ -17,8 +17,14 @@ function create_context(dev::CuDevice, flags::Integer)
     return CuContext(a[1])
 end
 
+"""
+Create a context for device. A context on the GPU is analogous to a process on the CPU, 
+with its own distinct address space and allocated resources. When a context is destroyed, 
+the system cleans up the resources allocated to it. 
+"""
 create_context(dev::CuDevice) = create_context(dev, 0)
 
+"Destroy context once execution is complete, releasing resources allocated to it."
 function destroy(ctx::CuContext)
     @cucall(cuCtxDestroy, (Ptr{Void},), ctx.handle)
 end
