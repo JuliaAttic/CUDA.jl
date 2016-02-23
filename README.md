@@ -1,3 +1,10 @@
+# End of life announcement
+Development of this package has moved on to [CUDArt.jl](https://github.com/JuliaGPU/CUDArt.jl). We currently only keep this package around as a point of reference and for backwards compability. There will no longer be any **new** funcionality added to this package (bugfixes still welcome). 
+
+Expect a full deprecation of this package with Julia `v0.5`.
+
+___
+
 ## CUDA.jl
 
 Julia Programming interface for CUDA.
